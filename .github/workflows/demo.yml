@@ -20,6 +20,16 @@ jobs:
         id: start-selenoid
         continue-on-error: false
 
+      - name: Restore Maven cache
+        uses: skjolber/maven-cache-github-action@v1
+        with:
+            step: restore
+
       - name: run test
         run: |
          mvn test
+
+      - name: Save Maven cache
+        uses: skjolber/maven-cache-github-action@v1
+        with:
+          step: save
