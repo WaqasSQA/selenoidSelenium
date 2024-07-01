@@ -13,7 +13,7 @@ import java.util.Map;
 public class SelenoidTest {
     public WebDriver driver;
 
-    @Test (groups = "web")
+    @Test
     public void test1(){
         try {
             driver.get("http://www.google.com");

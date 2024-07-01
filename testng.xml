@@ -1,11 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="ExampleTestSuite">
     <test name="ExampleTests">
-        <groups>
-            <run>
-                <include name="web"/>
-            </run>
-        </groups>
         <classes>
             <class name="org.example.SelenoidTest"/>
         </classes>
