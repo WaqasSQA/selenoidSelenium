@@ -15,6 +15,10 @@ jobs:
           distribution: 'temurin'
           java-version:  '17'
 
+      - name: Cache Docker images.
+        uses: ScribeMD/docker-cache@0.5.0
+        continue-on-error: true
+
       - name: start selenoid server
         uses: ajinx/selenoid@1.0
         id: start-selenoid
@@ -22,6 +26,7 @@ jobs:
 
       - name: Restore Maven cache
         uses: skjolber/maven-cache-github-action@v1
+        continue-on-error: true
         with:
             step: restore
 
@@ -31,5 +36,6 @@ jobs:
 
       - name: Save Maven cache
         uses: skjolber/maven-cache-github-action@v1
+        continue-on-error: true
         with:
           step: save
