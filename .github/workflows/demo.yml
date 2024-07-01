@@ -16,7 +16,7 @@ jobs:
           java-version:  '17'
 
       - name: start selenoid server
-        uses: ajinx/selenoid@v
+        uses: ajinx/selenoid@1.0
         id: start-selenoid
         continue-on-error: false
 
