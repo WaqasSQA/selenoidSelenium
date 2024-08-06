@@ -1,0 +1,10 @@
+-shouldnt add /wd/hub in browers.json
+-should add wd/hub in url
+-should use new standard of capabilities
+
+
+docker run -d --name selenoid -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v C:\selenoid:/etc/selenoid:ro aerokube/selenoid:latest-release
+
+
+docker run -d --name selenoid-ui -p 8080:8080 --link selenoid aerokube/selenoid-ui:latest-release --selenoid-uri=http://selenoid:4444
+
